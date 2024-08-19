@@ -101,7 +101,3 @@ body, html {
         padding-bottom:1.5em;
     }
 }
-
-@media (max-width: @iphone-screen) {
-    background-attachment: scroll;
-}
