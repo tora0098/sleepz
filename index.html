@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/iac1xgx.css">
     <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    
 
 </head>
 <body>
@@ -26,11 +28,14 @@
 
     <script>
         function updateVH() {
-            document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
         }
         window.addEventListener('resize', updateVH);
+        window.addEventListener('orientationchange', updateVH); // Add orientation change for better handling on mobile
         updateVH();
     </script>
+    
     
 </body>
 </html>
