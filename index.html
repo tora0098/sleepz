@@ -19,5 +19,14 @@
         </div>
         <p class="contact-info">info@getsleepz.com</p>
     </div>
+
+    <script>
+        function updateVH() {
+            document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+        }
+        window.addEventListener('resize', updateVH);
+        updateVH();
+    </script>
+    
 </body>
 </html>
